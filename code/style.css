@@ -1,5 +1,125 @@
-/* After you've linked the CSS file in the HTML,
-this should turn the background blue ;) */
+/* Default styles (mobile first) */
 body {
-  background: blue;
+  background: #fefefe;
+  color: #1d1d1d;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+header {
+  position: relative;
+}
+
+.header-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 8px;
+}
+
+.left-items {
+  display: flex;
+  gap: 5px;
+}
+
+
+.left-items img {
+  height: 18px;
+}
+
+.left-items a img {
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.left-items a:hover img {
+  filter: grayscale(100%);
+  opacity: 0.7;
+}
+
+/* Center h1 absolutely */
+.header-wrap h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: 42px;
+}
+
+/* Hide checkbox */
+#menu-checkbox {
+  display: none;
+}
+
+/* Toggle button styling */
+.menu-toggle {
+  cursor: pointer;
+}
+
+.menu-toggle img {
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+/* Initial hidden nav menu */
+.mobile-nav {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  background: #fefefe;
+  padding: 0 5px;
+  position: absolute;
+  top: 36px;
+  right: 0;
+  width: 200px;
+}
+
+/* Shown state */
+#menu-checkbox:checked ~ .mobile-nav {
+  max-height: 300px;
+}
+
+/* List styles */
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+}
+
+.mobile-nav li {
+  margin: 0.5rem 0;
+}
+
+.mobile-nav a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  color: #1d1d1d;
+  transition: color 0.3s ease;
+}
+
+.mobile-nav a:hover {
+  color: #525252;
+}
+
+
+.site-footer {
+  background-image: url('assets/kontxt2.png');
+  background-size: cover;
+  background-position: center;
+  padding: 25px;
+  font-family: 'Times New Roman', Times, serif;
+  color: #fefefe; /* or another color for contrast */
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Tablet: 600px and up */
+@media (min-width: 600px) {
+  
+}
+
+/* Desktop: 1024px and up */
+@media (min-width: 1024px) {
+
 }
