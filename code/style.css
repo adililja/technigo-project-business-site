@@ -102,6 +102,32 @@ header {
   color: #525252;
 }
 
+/* Logotypen som fyller hela skärmen i bakgrunden */
+.background-hero {
+  position: fixed;
+  top: 36%; /* change to 50%? for tablet/desktop */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the image */
+  width: 110vw; /* change to less for tablet/desktop */     
+  aspect-ratio: 16 / 9;
+  background-image: url('assets/kontxt-logo.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;  /* show full image, keep proportions */
+  opacity: 0.1;
+  animation: pulseOpacity 6.3s ease-in-out infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/*content styling inside herosection*/
+
+@keyframes pulseOpacity {
+  0% { opacity: 0.13; }
+  50% { opacity: 0.48; }
+  100% { opacity: 0.13; }
+}
+
 
 .site-footer {
   background-image: url('assets/kontxt2.png');
