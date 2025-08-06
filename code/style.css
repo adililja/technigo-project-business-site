@@ -14,7 +14,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 8px;
+  margin: 15px 8px;
 }
 
 .left-items {
@@ -87,7 +87,7 @@ header {
 }
 
 .mobile-nav li {
-  margin: 0.5rem 0;
+  margin: 20px;
 }
 
 .mobile-nav a {
@@ -133,7 +133,7 @@ header {
   grid-template-columns: repeat(5, 1fr);
   position: relative;
   z-index: 1;
-  padding-top: 500px;
+  padding-top: 300px;
   gap: 8px;
 }
 
@@ -142,6 +142,7 @@ header {
   height: auto;
 }
 
+/*change grid-items to tablet*/
 .left-icon {
   grid-column: 1 / span 2;
   display: flex;
@@ -152,12 +153,14 @@ header {
 .right-text-box {
   grid-column: 3 / span 3;
   font-family: Georgia, serif;
+  letter-spacing: 0.4px;
 }
 
 .left-text-box {
   grid-column: 1 / span 3;
   text-align: right;
   font-family: Georgia, serif;
+  letter-spacing: 0.4px;
 }
 
 .right-icon {
@@ -167,6 +170,65 @@ header {
   align-items: center;     /* vertical */
 }
 
+* {
+    box-sizing: border-box;
+}
+
+.write-us-section {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    z-index: auto;
+    position: relative;
+    margin-bottom: 50px;
+    border: 1px solid; /*remove*/
+}
+
+h2 {
+  font-size: 36px;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+fieldset {
+  border: none;
+  background: transperant;
+  padding: 0;
+  width: 70%; /* change to less for tablet/desktop */
+}
+
+input {
+  width: 100%; 
+  background: tansperant; /*no works???*/
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.5px; /* Try 0.5–1px */
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: #adadad 1.5px solid;
+  transition: border-bottom-color 0.4s ease;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 1.5px solid #525252; /* change to another color for focus */
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #adadad;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #adadad;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #adadad;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #adadad;
+}
 
 .site-footer {
   background-image: url('assets/kontxt2.png');
@@ -179,7 +241,7 @@ header {
   font-size: 14px;
 }
 
-/* Mobile styles */
+/* Mobile styles (no media quary, change!!!!)*/
 @media (max-width: 600px) {
   .content {
     grid-template-columns: 1fr;
