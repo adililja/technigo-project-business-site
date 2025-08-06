@@ -181,8 +181,7 @@ header {
     align-items: center;
     z-index: auto;
     position: relative;
-    margin-bottom: 50px;
-    border: 1px solid; /*remove*/
+    margin: 50px 0;
 }
 
 h2 {
@@ -201,7 +200,7 @@ fieldset {
 
 input {
   width: 100%; 
-  background: tansperant; /*no works???*/
+  background: transparent;
   font-family: Arial, sans-serif;
   font-size: 15px;
   letter-spacing: 0.5px; /* Try 0.5–1px */
@@ -228,6 +227,37 @@ input:focus {
 }
 :-moz-placeholder { /* Firefox 18- */
   color: #adadad;
+}
+
+.submit-button {
+  color: #525252;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  background: #fefefe; /* <- FIXED */
+  appearance: none;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  border: 2px solid #525252;
+  border-radius: 25px;
+  margin-top: 12px;
+  padding: 14px 24px;
+  font-size: 18px;
+  line-height: 20px;
+  transition: all 0.4s ease;
+}
+
+.submit-button:hover {
+  color: #fefefe;
+  background: linear-gradient(135deg, #525252, #1d1d1d);
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.submit-button:active {
+  background: linear-gradient(135deg, #525252, #1d1d1d);
+  color: #fefefe;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transform: scale(0.9);
 }
 
 .site-footer {
