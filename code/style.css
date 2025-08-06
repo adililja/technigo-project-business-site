@@ -170,6 +170,77 @@ header {
   align-items: center;     /* vertical */
 }
 
+.slideshow {
+  width: 100vw;
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.slides {
+  display: flex;
+  width: calc(100vw * 3); /* 3 slides = 100% * 3 */
+  transition: transform 0.5s ease;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.slide {
+  width: 100vw; /* Each slide takes full viewport width */
+  height: 350px; /* Set a fixed height, change responsiveness.. */
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* keep aspect ratio without cropping */
+  display: block;
+  border-radius: 4px;
+}
+
+/* Adjust transform distances (80vw + gap makes spacing) */
+#slide1:checked ~ .slides {
+  transform: translateX(0vw);
+}
+#slide2:checked ~ .slides {
+  transform: translateX(-100vw);
+}
+#slide3:checked ~ .slides {
+  transform: translateX(-200vw);
+}
+
+.nav {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.nav label {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#slide1:checked ~ .nav label[for="slide1"],
+#slide2:checked ~ .nav label[for="slide2"],
+#slide3:checked ~ .nav label[for="slide3"] {
+  background: #525252;
+}
+
 * {
     box-sizing: border-box;
 }
