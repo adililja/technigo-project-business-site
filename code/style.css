@@ -85,7 +85,6 @@ header {
   padding: 0;
   margin: 0;
   text-align: right;
-  z-index: 1;
 }
 
 .mobile-nav li {
@@ -421,11 +420,83 @@ input:focus {
 }
 
 /*Landscape-layout*/
-@media (max-height: 500px) {
+@media (orientation: landscape) {
+  .content {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, auto);
+    margin: 0;
+    padding-top: 500px;
+    gap: 10px;
+  }
   
+  .left-icon {
+    grid-column: 1;
+  }
+  
+  .right-text-box {
+    grid-column: 2 / span 2;
+    text-align: justify;
+  }
+  
+  .right-icon {
+    grid-column: 6;
+  }
+  
+  .left-text-box {
+    grid-column: 4 / span 2;
+    grid-row: 2;
+    text-align: justify;
+    display: flex;
+    }
+ 
+  #last-box {
+    grid-row: 3;
+  }
+  
+  .left-text-box h3 {
+    text-align: right;
+  }
 }
 
 /* Desktop: 1024px and up */
 @media (min-width: 1024px) {
+  .left-items {
+    padding: 30px;
+    gap: 20px;
+  }
+  .left-items img {
+    height: 50px;
+  }
 
+  .header-wrap h1 {
+    font-size: 110px; /* Larger font size for desktop */
+  }
+
+  /* navbar doesnt work?!?!?!*/
+  .menu-toggle img {
+    height: 80px;
+  }
+
+  .menu-toggle {
+    padding: 0 30px;
+  }
+
+  .mobile-nav {
+    padding: 60px 30px;
+    width: auto;
+  }
+
+  /*-*/
+  .mobile-nav li {
+    padding-top: 8px;
+  }
+
+  .mobile-nav a {
+    font-size: 40px;
+  }
+
+  .background-hero {
+    width: 70vw;
+    top: 50%;
+  }
 }
