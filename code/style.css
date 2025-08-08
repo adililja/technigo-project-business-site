@@ -460,6 +460,22 @@ input:focus {
 
 /* Desktop: 1024px and up */
 @media (min-width: 1024px) {
+  html {
+    font-size: 22px; /* Default is ~16px, so this makes everything bigger */
+  }
+
+  body {
+    line-height: 1.6; /* Optional: more breathing room */
+  }
+
+  .header-wrap h1 {
+    font-size: 100px;
+  }
+
+  h2 { font-size: 60px; }
+  h3 { font-size: 36px; }
+  p, li { font-size: 24px; }
+  
   .left-items {
     padding: 30px;
     gap: 20px;
@@ -468,11 +484,6 @@ input:focus {
     height: 50px;
   }
 
-  .header-wrap h1 {
-    font-size: 110px; /* Larger font size for desktop */
-  }
-
-  /* navbar doesnt work?!?!?!*/
   .menu-toggle img {
     height: 80px;
   }
@@ -481,22 +492,99 @@ input:focus {
     padding: 0 30px;
   }
 
-  .mobile-nav {
-    padding: 60px 30px;
-    width: auto;
+    .mobile-nav {
+    position: absolute;
+    top: 100px; /* pushes menu below bigger header */
+    right: 0;
+    width: 300px; /* a bit wider for desktop */
+    background: transparent;
+    border: none;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
+    z-index: 1;
   }
-
-  /*-*/
-  .mobile-nav li {
-    padding-top: 8px;
+  
+  #menu-checkbox:checked ~ .mobile-nav {
+    max-height: 500px; /* big enough to fit links */
   }
-
+  
   .mobile-nav a {
-    font-size: 40px;
+    font-size: 42px; /* bigger text for desktop */
+    display: block;
+    padding: 12px 20px;
   }
 
   .background-hero {
     width: 70vw;
     top: 50%;
+  }
+
+  .content {
+    gap: 50px;
+    padding-top: 900px;
+  }
+
+  .left-icon img,
+  .right-icon img {
+    width: 72px; /* bigger for desktop */
+    height: auto;
+  }
+
+  .left-icon,
+  .right-icon {
+    display: flex;
+    justify-content: center; /* center horizontally in their grid cell */
+    align-items: center;     /* center vertically with the text */
+    padding: 0;              /* remove excess padding from tablet layout */
+  }
+
+  .right-text-box,
+  .left-text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertically center text to icon */
+  }
+
+  .slideshow {
+    padding-top: 250px;
+  }
+
+  .slide {
+    height: 700px;      /* bigger than 350px */
+    margin: 50px 0 80px;
+  }
+
+  .slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* keeps aspect ratio without cropping */
+  }
+
+  .nav label {
+    width: 15px; /* bigger for desktop */
+    height: 15px;
+  }
+
+  .write-us-section {
+    margin: 300px auto 200px;
+    width: 60%; 
+  }
+
+  input { 
+    font-size: 28px;
+    padding: 15px;
+    border-bottom: 2px solid #adadad; /* thicker border */
+  }
+
+  .submit-button {
+    font-size: 26px;   /* Bigger text */
+    padding: 22px 40px;/* Bigger clickable area */
+    border-radius: 32px;
+    margin-top: 50px;
+  }
+
+  .site-footer {
+    padding: 50px;
   }
 }
