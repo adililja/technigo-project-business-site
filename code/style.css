@@ -99,10 +99,6 @@ header {
   transition: color 0.3s ease;
 }
 
-.mobile-nav a:hover {
-  color: #525252;
-}
-
 /* Logotypen som fyller hela skärmen i bakgrunden */
 .background-hero {
   position: fixed;
@@ -456,48 +452,47 @@ input:focus {
   .left-text-box h3 {
     text-align: right;
   }
+
+  .write-us-section {
+    width: 65%; 
+  }
 }
 
 /* Desktop: 1024px and up */
 @media (min-width: 1024px) {
-  html {
-    font-size: 22px; /* Default is ~16px, so this makes everything bigger */
-  }
-
   body {
     line-height: 1.6; /* Optional: more breathing room */
   }
 
   .header-wrap h1 {
-    font-size: 100px;
+    font-size: 68px;
   }
 
-  h2 { font-size: 60px; }
-  h3 { font-size: 36px; }
-  p, li { font-size: 24px; }
+  h2 { font-size: 40px; }
+  h3 { font-size: 24px; }
+  p, li { font-size: 16px; }
   
   .left-items {
-    padding: 30px;
-    gap: 20px;
+    padding: 15px;
+    gap: 15px;
   }
   .left-items img {
-    height: 50px;
+    height: 30px;
   }
 
   .menu-toggle img {
-    height: 80px;
+    height: 52px;
   }
 
   .menu-toggle {
-    padding: 0 30px;
+    padding: 0 20px;
   }
 
     .mobile-nav {
     position: absolute;
-    top: 100px; /* pushes menu below bigger header */
+    top: 70px; /* pushes menu below bigger header */
     right: 0;
     width: 300px; /* a bit wider for desktop */
-    background: transparent;
     border: none;
     overflow: hidden;
     max-height: 0;
@@ -510,10 +505,16 @@ input:focus {
   }
   
   .mobile-nav a {
-    font-size: 42px; /* bigger text for desktop */
+    font-size: 32px; /* bigger text for desktop */
     display: block;
-    padding: 12px 20px;
+    padding: 8px 0;
   }
+
+  /* no works?!?!*/
+  .mobile-nav a:hover {
+  color: #525252;
+  background: #fefefe; /* light background on hover */
+}
 
   .background-hero {
     width: 70vw;
@@ -521,13 +522,12 @@ input:focus {
   }
 
   .content {
-    gap: 50px;
-    padding-top: 900px;
+    gap: auto;
   }
 
   .left-icon img,
   .right-icon img {
-    width: 72px; /* bigger for desktop */
+    width: 48px; /* bigger for desktop */
     height: auto;
   }
 
@@ -542,17 +542,11 @@ input:focus {
   .right-text-box,
   .left-text-box {
     display: flex;
-    flex-direction: column;
-    justify-content: center; /* vertically center text to icon */
-  }
-
-  .slideshow {
-    padding-top: 250px;
+    flex-direction: column; 
   }
 
   .slide {
-    height: 700px;      /* bigger than 350px */
-    margin: 50px 0 80px;
+    margin: 50px 0;
   }
 
   .slide img {
@@ -561,30 +555,23 @@ input:focus {
     object-fit: contain; /* keeps aspect ratio without cropping */
   }
 
-  .nav label {
-    width: 15px; /* bigger for desktop */
-    height: 15px;
-  }
-
   .write-us-section {
-    margin: 300px auto 200px;
-    width: 60%; 
+    margin: 150px auto 100px;
   }
 
   input { 
-    font-size: 28px;
-    padding: 15px;
-    border-bottom: 2px solid #adadad; /* thicker border */
+    font-size: 20px;
+    padding: 12px;
   }
 
   .submit-button {
-    font-size: 26px;   /* Bigger text */
-    padding: 22px 40px;/* Bigger clickable area */
+    font-size: 22px;   /* Bigger text */
+    padding: 18px 32px;/* Bigger clickable area */
     border-radius: 32px;
-    margin-top: 50px;
+    margin-top: 40px;
   }
 
   .site-footer {
-    padding: 50px;
+    padding: 30px;
   }
 }
