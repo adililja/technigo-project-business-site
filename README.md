@@ -8,7 +8,6 @@ I started out desining the mobile layout on paper and went by constructing from 
 
 In more time, I would:
 
--   Have more input types in the form
 -   Make a small logo go to the tab in browser
 -   Fix some hover-transitions
 -   Make the navbar linked and working

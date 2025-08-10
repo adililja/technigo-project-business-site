@@ -1,4 +1,9 @@
-/* Default styles (mobile first) */
+/* ===== Global Defaults ===== */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
   background: #fefefe;
   color: #1d1d1d;
@@ -6,6 +11,7 @@ body {
   margin: 0;
 }
 
+/* ===== Header ===== */
 header {
   position: relative;
 }
@@ -37,7 +43,7 @@ header {
   opacity: 0.7;
 }
 
-/* Center h1 absolutely */
+/* Title */
 .header-wrap h1 {
   position: absolute;
   left: 50%;
@@ -46,12 +52,11 @@ header {
   font-size: 50px;
 }
 
-/* Hide checkbox */
+/* Menu Toggle */
 #menu-checkbox {
   display: none;
 }
 
-/* Toggle button styling */
 .menu-toggle {
   cursor: pointer;
 }
@@ -61,7 +66,7 @@ header {
   transition: transform 0.3s ease;
 }
 
-/* Initial hidden nav menu */
+/* Mobile Navigation */
 .mobile-nav {
   max-height: 0;
   overflow: hidden;
@@ -74,7 +79,6 @@ header {
   width: 200px;
 }
 
-/* Shown state */
 #menu-checkbox:checked ~ .mobile-nav {
   max-height: 300px;
 }
@@ -99,13 +103,13 @@ header {
   transition: color 0.3s ease;
 }
 
-/* Logotypen som fyller hela skärmen i bakgrunden */
+/* ===== Background Hero ===== */
 .background-hero {
   position: fixed;
-  top: 36%; /* change to 50%? for tablet/desktop */
+  top: 36%;
   left: 50%;
   transform: translate(-50%, -50%); /* Center the image */
-  width: 110vw; /* change to less for tablet/desktop */     
+  width: 110vw;     
   aspect-ratio: 16 / 9;
   background-image: url('assets/kontxt-logo.png');
   background-repeat: no-repeat;
@@ -118,14 +122,13 @@ header {
 }
 
 /*content styling inside herosection*/
-
 @keyframes pulseOpacity {
   0% { opacity: 0.13; }
   50% { opacity: 0.48; }
   100% { opacity: 0.13; }
 }
 
-/* === Mobile Default Grid (Single Column) === */
+/* ===== Content Grid ===== */
 .content {
   display: grid;
   grid-template-columns: 1fr;
@@ -141,9 +144,9 @@ header {
 
 .content h2 {
   grid-column: 1 / -1;   /* Span the full width of the grid */
-  text-align: center;    /* Already present — this ensures horizontal centering */
+  text-align: center;    /* ensures horizontal centering */
   font-family: Arial, sans-serif;
-  padding-bottom: 20px;  /* Optional: spacing after heading */
+  padding-bottom: 20px; 
 }
 
 .grid-item img {
@@ -180,15 +183,15 @@ input[type="radio"] {
 
 .slides {
   display: flex;
-  width: calc(100vw * 3); /* 3 slides = 100% * 3 */
+  width: calc(100vw * 3); /* 3 slides, each 100vw */
   transition: transform 0.5s ease;
   justify-content: flex-start;
   padding: 0;
 }
 
 .slide {
-  width: 100vw; /* Each slide takes full viewport width */
-  height: 350px; /* Set a fixed height, change responsiveness.. */
+  width: 100vw;
+  height: 350px;
   flex-shrink: 0;
   display: flex;
   justify-content: center;
@@ -204,17 +207,12 @@ input[type="radio"] {
   border-radius: 4px;
 }
 
-/* Adjust transform distances (80vw + gap makes spacing) */
-#slide1:checked ~ .slides {
-  transform: translateX(0vw);
-}
-#slide2:checked ~ .slides {
-  transform: translateX(-100vw);
-}
-#slide3:checked ~ .slides {
-  transform: translateX(-200vw);
-}
+/* Slide positions */
+#slide1:checked ~ .slides { transform: translateX(0vw); }
+#slide2:checked ~ .slides { transform: translateX(-100vw); }
+#slide3:checked ~ .slides { transform: translateX(-200vw); }
 
+/* Slide navigation dots */
 .nav {
   text-align: center;
   margin-top: 10px;
@@ -237,10 +235,7 @@ input[type="radio"] {
   background: #525252;
 }
 
-* {
-    box-sizing: border-box;
-}
-
+/* ===== Contact Form ===== */
 .write-us-section {
     display: flex;
     flex-flow: column;
@@ -262,7 +257,7 @@ fieldset {
   border: none;
   background: transperant;
   padding: 0;
-  width: 70%; /* change to less for tablet/desktop */
+  width: 70%;
 }
 
 input {
@@ -270,7 +265,7 @@ input {
   background: transparent;
   font-family: Arial, sans-serif;
   font-size: 15px;
-  letter-spacing: 0.5px; /* Try 0.5–1px */
+  letter-spacing: 0.5px;
   padding: 10px;
   margin: 10px 0;
   border: none;
@@ -280,7 +275,7 @@ input {
 
 input:focus {
   outline: none;
-  border-bottom: 1.5px solid #525252; /* change to another color for focus */
+  border-bottom: 1.5px solid #525252;
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -300,7 +295,7 @@ input:focus {
   color: #525252;
   letter-spacing: 0.4px;
   text-transform: uppercase;
-  background: #fefefe; /* <- FIXED */
+  background: #fefefe; 
   appearance: none;
   font-family: Arial, sans-serif;
   font-weight: bold;
@@ -327,18 +322,20 @@ input:focus {
   transform: scale(0.9);
 }
 
+/* ===== Footer ===== */
 .site-footer {
   background-image: url('assets/kontxt2.png');
   background-size: cover;
   background-position: center;
   padding: 25px;
   font-family: 'Times New Roman', Times, serif;
-  color: #fefefe; /* or another color for contrast */
+  color: #fefefe; 
   text-align: center;
   font-size: 14px;
 }
 
-/* Tablet: 600px and up */
+/* ===== Media Queries ===== */
+/* Tablet */
 @media (min-width: 600px) {
   .left-items {
     padding: 10px;
@@ -362,8 +359,8 @@ input:focus {
   }
 
   .background-hero {
-    width: 80vw; /* Adjusted for tablet */
-    top: 40%; /* Adjusted for tablet */
+    width: 80vw; 
+    top: 40%; 
   }
   
   .content {
@@ -415,7 +412,7 @@ input:focus {
   }
 }
 
-/*Landscape-layout*/
+/* Landscape */
 @media (orientation: landscape) {
   .content {
     grid-template-columns: repeat(6, 1fr);
@@ -458,10 +455,10 @@ input:focus {
   }
 }
 
-/* Desktop: 1024px and up */
+/* Desktop */
 @media (min-width: 1024px) {
   body {
-    line-height: 1.6; /* Optional: more breathing room */
+    line-height: 1.6;
   }
 
   .header-wrap h1 {
@@ -490,9 +487,9 @@ input:focus {
 
     .mobile-nav {
     position: absolute;
-    top: 70px; /* pushes menu below bigger header */
+    top: 70px;
     right: 0;
-    width: 300px; /* a bit wider for desktop */
+    width: 300px;
     border: none;
     overflow: hidden;
     max-height: 0;
@@ -505,7 +502,7 @@ input:focus {
   }
   
   .mobile-nav a {
-    font-size: 32px; /* bigger text for desktop */
+    font-size: 32px;
     display: block;
     padding: 8px 0;
   }
@@ -527,7 +524,7 @@ input:focus {
 
   .left-icon img,
   .right-icon img {
-    width: 48px; /* bigger for desktop */
+    width: 48px; 
     height: auto;
   }
 
@@ -565,8 +562,8 @@ input:focus {
   }
 
   .submit-button {
-    font-size: 22px;   /* Bigger text */
-    padding: 18px 32px;/* Bigger clickable area */
+    font-size: 22px; 
+    padding: 18px 32px;
     border-radius: 32px;
     margin-top: 40px;
   }

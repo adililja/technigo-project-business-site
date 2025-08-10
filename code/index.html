@@ -21,30 +21,29 @@
         
         <h1>kontxt</h1>
         
-        <!-- Toggle Checkbox & Label as Button -->
+        <!-- Mobile Menu Toggle -->
         <input type="checkbox" id="menu-checkbox" />
-          <label for="menu-checkbox" class="menu-toggle">
-            <img src="assets/menu-toggle.svg" alt="menu toggle"/>  
-          </label>
+        <label for="menu-checkbox" class="menu-toggle">
+          <img src="assets/menu-toggle.svg" alt="menu toggle"/>  
+        </label>
 
-          <!-- Navigation Menu -->
-          <nav class="mobile-nav">
-            <ul>
-              <li><a href="#">tjänster</a></li>
-              <li><a href="#">partners</a></li>
-              <li><a href="#">kontakt</a></li>
-            </ul>
-          </nav>
+        
+        <nav class="mobile-nav">
+          <ul>
+            <li><a href="#">tjänster</a></li>
+            <li><a href="#">partners</a></li>
+            <li><a href="#">kontakt</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
 
     <main>
       
-      <div class="background-hero">
-      <!-- image as a header  -->
-      </div>
+      <!-- Background hero image -->
+      <div class="background-hero"></div>
       
-      <!-- descriptions of buissness offerings -->
+      <!-- Services Section -->
       <section class="content"> 
         <h2>tjänster</h2>
 
@@ -106,7 +105,7 @@
         </div>
       </section>
 
-      <!--tidigare partnes flip through-->
+      <!-- Partners Slideshow -->
       <div class="slideshow">
         <h2>partners</h2>
         <!-- Radio buttons for controlling slides -->
@@ -136,13 +135,13 @@
       </div>
 
 
-      <!-- Signup form -->
+      <!-- Contact form -->
       <form class="write-us-section" action="http://httpbin.org/anything" method="post">
         <h2>kontakt</h2>
         
         <fieldset>
           <input type="text" name="name" placeholder="organisation" required>
-          <input type="text" name="contact" placeholder="mejl eller telefon" required>
+          <input type="email" name="email" placeholder="mejl">
           <input type="text" name="text" placeholder="skriv till oss">
         </fieldset>
 
