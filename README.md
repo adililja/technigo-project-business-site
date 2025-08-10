@@ -1,15 +1,19 @@
 # Business Site
 
-The assigment was to build a website for any buisness. Buildning in htaml, designing and made fully responsive with css and also including a form with inputs so that a user can send information. The information will only be shown in httpbin.eg
+The assigment was to build a website for any buisness. Building in html, designing and made fully responsive with css and also including a form with inputs so that a user can send information. The information should be sent to httpbin.org/anything.
 
-This is a website for a company in Sweden that helps other oragisations and projects to get of their feet or realize ideas. They mainly work within the culture sector and have experience financing and curating music-festivals and other events.
+This is a website for a company in Sweden that helps other oragisations and projects to get of their feet and/or realize ideas. They mainly work within the culture sector and have experience financing and curating music-festivals and other events.
 
-Replace this readme with your own information about the project. You can include things like:
+I started out desining the mobile layout on paper and went by constructing from header to footer. After that I made the page responsive mainly by chaning the layout of the business information to fit tablet respective a landscape layout.
 
--   Brief description of the assignment
--   How you approached the task, what tools and techniques you used, and how you planned it
--   If you had more time, what would be next?
+In more time, I would:
+
+-   Have more input types in the form
+-   Make a small logo go to the tab in browser
+-   Fix some hover-transitions
+-   Make the navbar linked and working
+-   Improve slideshow with JavaScript
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://kontxt.netlify.app/
